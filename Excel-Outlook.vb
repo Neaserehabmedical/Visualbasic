@@ -1,3 +1,7 @@
+##This script fields set cell objectives in Excel into outlook
+##rngto = Send to, rngsubject = subjectline, rngbody = the actual message or data you want to send
+##random_cell is where you place the column you wish to pull from (ex. B1 or D5)
+
 Sub CreateMail()
  
     Dim objOutlook As Object
@@ -11,9 +15,9 @@ Sub CreateMail()
     Set objMail = objOutlook.CreateItem(0)
  
     With ActiveSheet
-        Set rngTo = .Range("B1")
-        Set rngSubject = .Range("B2")
-        Set rngBody = .Range("B3")
+        Set rngTo = .Range("RANDOM_CELL")
+        Set rngSubject = .Range("RANDOM_CELL")
+        Set rngBody = .Range("RANDOM_CELL")
     End With
  
     With objMail
